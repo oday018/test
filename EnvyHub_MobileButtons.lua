@@ -28,7 +28,7 @@ local PANEL_H  = PADDING * 2 + ROWS * BTN_SIZE + (ROWS - 1) * BTN_GAP
 local MobilePanel = Instance.new("Frame")
 MobilePanel.Name = "MobileButtonsPanel"
 MobilePanel.Size = UDim2.new(0, PANEL_W, 0, PANEL_H)
-MobilePanel.Position = UDim2.new(1, -(PANEL_W + 20), 1, -(PANEL_H + 20))
+MobilePanel.Position = UDim2.new(1, -(PANEL_W + 20), 0, 20)  -- الفوق يمين
 MobilePanel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 MobilePanel.BackgroundTransparency = 1
 MobilePanel.BorderSizePixel = 0
@@ -509,7 +509,7 @@ local _, setCarrySpeed = createMobileButton("Speed", "CARRY\nSPD", 1, 2, true, f
 	State.speedToggled = on
 end)
 
--- Row 3: LAGGER | (placeholder)
+-- Row 3: LAGGER | LAGGER CARRY
 local _, setLagger = createMobileButton("Lagger", "LAGGER\nMODE", 0, 3, true, function(on)
 	State.laggerEnabled = on
 end)
@@ -518,4 +518,4 @@ local _, setLaggerCarry = createMobileButton("LaggerCarry", "LAGGER\nCARRY", 1, 
 	State.laggerEnabled = on
 end)
 
-print("[Envy Hub Mobile] Loaded! الأزرار جاهزة يا حبيبي 🎮")
+print("[Envy Hub Mobile] تم التحديث! الأزرار في الفوق يمين 🎮")
